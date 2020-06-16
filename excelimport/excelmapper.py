@@ -17,4 +17,5 @@ def read_excel():
 
         df = pd.read_excel(r'.\TestExam.xlsx', sheet_name='Task ' + str(index))
         sheets['Task ' + str(index)] = df
+    #print(sheets["General Information"])
     return sheets
