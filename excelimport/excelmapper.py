@@ -11,11 +11,10 @@ def get_number_of_sheets():
 # Return the specified excel file as dictionary
 def read_excel():
     number = get_number_of_sheets()
-    sheets = {}
-    sheets["General Information"] = pd.read_excel(r'.\TestExam.xlsx', sheet_name='General Information')
+    excel_dict = {}
+    excel_dict["General Information"] = pd.read_excel(r'.\TestExam.xlsx', sheet_name='General Information')
     for index in range(1, number):
-
         df = pd.read_excel(r'.\TestExam.xlsx', sheet_name='Task ' + str(index))
-        sheets['Task ' + str(index)] = df
-    #print(sheets["General Information"])
-    return sheets
+        excel_dict['Task ' + str(index)] = df
+    # print(sheets["General Information"])
+    return excel_dict
